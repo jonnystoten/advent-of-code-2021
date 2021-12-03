@@ -25,7 +25,7 @@ defmodule AdventOfCode.Day2 do
     x * y
   end
 
-  defp move_with_aim({"forward", num}, {x, y, aim}), do: {x + num, y + (num*aim), aim}
+  defp move_with_aim({"forward", num}, {x, y, aim}), do: {x + num, y + num * aim, aim}
   defp move_with_aim({"down", num}, {x, y, aim}), do: {x, y, aim + num}
   defp move_with_aim({"up", num}, {x, y, aim}), do: {x, y, aim - num}
 end

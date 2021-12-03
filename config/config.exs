@@ -3,7 +3,7 @@ import Config
 config :logger,
   level: :info
 
-  config :tesla, adapter: Tesla.Adapter.Hackney
+config :tesla, adapter: Tesla.Adapter.Hackney
 
 # Create 'secret.exs' with a cookie value from adventofcode.com like this:
 
