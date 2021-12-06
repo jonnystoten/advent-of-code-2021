@@ -68,8 +68,8 @@ defmodule AdventOfCode.Day4 do
 
   defp mark_boards(boards, draw) do
     Enum.map(boards, fn board ->
-      Map.new(board, fn {{x, y}, {num, marked}} ->
-        {{x, y}, {num, num == draw || marked}}
+      Map.map(board, fn {_key, {num, marked}} ->
+        {num, num == draw || marked}
       end)
     end)
   end
